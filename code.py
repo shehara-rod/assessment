@@ -59,14 +59,16 @@ while True:
     if transport in ['yes' or 'no']:
         break
     else:
-        print("please answer with 'yes' or 'no'. ")
+        cost += cost
 
 if transport == 'yes':
     cost += shuttle_cost
 
+    
+
 confirm = input("Do you want to confirm your registraion ? 'yes' or 'no'").strip().lower()
 
-print(f"Name:    {camper_name[i]}")
+print(f"Name:    {camper_name}")
 print(f"Age:  {camper_age}")
 print(f"Chosen camp type:  {chosen_camp}")
 print(f"Number of days: {days}")
