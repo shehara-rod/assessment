@@ -25,7 +25,17 @@ while True:
     else:
         print("Invalid input. Please enter a number for age")
 
+while True:
+    if age >= 15:
+        print("You do have the chance to become a camp leader")
+        break
+    else:
+        print("You are not old enough to become a camp leader")
+        break
+
 print ("\nPlease choose a camp by entering a number:  ")
+
+
 
 for i in range(len(camp_names)):
     print(f"{i + 1}. {camp_names[i]} ({camp_days[i]}days, {camp_difficulty[i]}, ${camp_cost[i]})")
@@ -56,10 +66,10 @@ chosen_meal = meal_options[index]
 
 while True:
     transport = input("Do you want to use the shuttle service for $80? (yes/no)").strip().lower()
-    if transport in ['yes' or 'no']:
+    if transport in ['yes','no']:
         break
     else:
-        cost += cost
+        print("please answer with 'yes' or 'no.'")
 
 if transport == 'yes':
     cost += shuttle_cost
@@ -77,3 +87,4 @@ print(f"Meal_choice:  {chosen_meal}")
 
 print (f"Total cost: ${cost}")
 print (f"Confirmed: {'Yes' if confirm =='yes' else 'No'}")
+ # type: ignore
